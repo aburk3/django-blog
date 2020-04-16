@@ -1,5 +1,7 @@
 from django.urls import path
 
+from .views import HomeView
+
 urlpatterns = [
-    path('')  # need to complete
+    path('home/', HomeView.as_view(), name='blog-home')
 ]
