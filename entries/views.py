@@ -7,6 +7,10 @@ class HomeView(ListView):
     model = Entry
     template_name = 'entries/index.html'
     context_object_name = "blog_entries"
+    # Setting the ordering for posts
+    ordering = ['-entry_date']
+    # Setting the number of posts per page
+    paginate_by = 3
 
 class EntryView(DetailView):
     model = Entry
